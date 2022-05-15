@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutY="6.0" prefHeight="34.0" prefWidth="540.0" text="Register Here" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1.0" layoutY="49.0" prefHeight="18.0" prefWidth="540.0" text="   Hi there, please fill in the form below and register !!!" />
+      <Label layoutX="21.0" layoutY="102.0" text="Label" />
+      <Label layoutX="21.0" layoutY="140.0" text="Label" />
+      <Label layoutX="21.0" layoutY="184.0" text="Label" />
+      <Label layoutX="21.0" layoutY="666.0" text="Label" />
+      <Label layoutX="21.0" layoutY="265.0" text="Gender" />
+      <Label layoutX="21.0" layoutY="311.0" text="Label" />
+      <Label layoutX="21.0" layoutY="352.0" text="Label" />
+      <Label layoutX="21.0" layoutY="406.0" text="Label" />
+      <Label layoutX="-180.0" layoutY="389.0" text="Label" />
+      <Label layoutX="21.0" layoutY="450.0" text="Label" />
+      <Label layoutX="21.0" layoutY="486.0" text="Label" />
+      <Label layoutX="21.0" layoutY="539.0" text="Label" />
+      <Label layoutX="21.0" layoutY="577.0" text="Label" />
+      <Label layoutX="21.0" layoutY="623.0" text="Label" />
+      <TextField layoutX="58.0" layoutY="98.0" />
+      <TextField layoutX="59.0" layoutY="136.0" />
+      <TextField layoutX="60.0" layoutY="180.0" />
+      <ComboBox layoutX="59.0" layoutY="214.0" prefHeight="10.0" prefWidth="150.0" />
+      <CheckBox layoutX="84.0" layoutY="265.0" mnemonicParsing="false" text="Male" />
+      <CheckBox layoutX="149.0" layoutY="265.0" mnemonicParsing="false" text="Female" />
+      <CheckBox layoutX="234.0" layoutY="265.0" mnemonicParsing="false" text="Other" />
+      <CheckBox layoutX="315.0" layoutY="265.0" mnemonicParsing="false" text="Rather not say" />
+      <ChoiceBox layoutX="215.0" layoutY="214.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
