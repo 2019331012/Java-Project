@@ -8,38 +8,38 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="All_Controller">
    <children>
-      <Label layoutX="225.0" layoutY="14.0" text="Welcome">
+      <Label fx:id="profile_label" layoutX="-2.0" layoutY="14.0" prefHeight="50.0" prefWidth="622.0" text="Welcome" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="34.0" />
          </font>
       </Label>
-      <Button layoutX="51.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#deposit" text="Deposit">
+      <Button fx:id="deposit_button" layoutX="51.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#deposit" text="Deposit">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="51.0" layoutY="319.0" mnemonicParsing="false" onMouseClicked="#withdraw" text="Withdraw">
+      <Button fx:id="withdraw_button" layoutX="51.0" layoutY="319.0" mnemonicParsing="false" onMouseClicked="#withdraw" text="Withdraw">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="53.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#fastcash" text="FastCash">
+      <Button fx:id="fastcash_button" layoutX="53.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#fastcash" text="FastCash">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="480.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#changePin" text="Change Pin">
+      <Button fx:id="change_pin_button" layoutX="480.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#changePin" text="Change Pin">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="53.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#showBalance" text="Account Balance">
+      <Button fx:id="account_balance_button" layoutX="53.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#showBalance" text="Account Balance">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="482.0" layoutY="101.0" mnemonicParsing="false" text="Help &amp; Support" />
-      <Button layoutX="52.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#logout" text="Logout" />
-      <Button layoutX="480.0" layoutY="319.0" mnemonicParsing="false" text="About Us" />
+      <Button fx:id="help_button" layoutX="482.0" layoutY="101.0" mnemonicParsing="false" text="Help &amp; Support" />
+      <Button fx:id="logout_button" layoutX="52.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#logout" text="Logout" />
+      <Button fx:id="about_button" layoutX="480.0" layoutY="319.0" mnemonicParsing="false" text="About Us" />
    </children>
 </AnchorPane>
