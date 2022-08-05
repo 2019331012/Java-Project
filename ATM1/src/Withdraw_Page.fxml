@@ -24,6 +24,6 @@
       <Label layoutX="349.0" layoutY="94.0" text="TK" />
       <Button layoutX="212.0" layoutY="174.0" mnemonicParsing="false" onMouseClicked="#withdrawConfirm" text="Confirm" />
       <Label fx:id="withdraw_warning_label" alignment="CENTER" layoutX="26.0" layoutY="135.0" prefHeight="18.0" prefWidth="495.0" text="Your Account currently does not have sufficient balance for the Withdrawal !!" textFill="#d41212" />
-      <Button layoutX="35.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#backtoProfile" text="&lt;&lt;Back" />
+      <Button layoutX="35.0" layoutY="246.0" mnemonicParsing="false" onAction="#backtoProfile" onMouseClicked="#backtoProfile" text="&lt;&lt;Back" />
    </children>
 </AnchorPane>

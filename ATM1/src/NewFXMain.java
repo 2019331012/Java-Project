@@ -3,9 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMain.java to edit this template
  */
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -19,7 +24,16 @@ public class NewFXMain extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Login_Page.fxml"));
+            Scene scene = new Scene(root);
+//            scene.getStylesheets().add(getClass().getResource("login_page.css"));
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException ex) {
+            Logger.getLogger(NewFXMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+/*        Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
@@ -36,7 +50,7 @@ public class NewFXMain extends Application {
         
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
-        primaryStage.show();
+        primaryStage.show();*/
     }
 
     /**
