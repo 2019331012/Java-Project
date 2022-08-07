@@ -13,13 +13,13 @@
    <children>
       <Label alignment="CENTER" layoutY="14.0" prefHeight="18.0" prefWidth="331.0" text="Your account registration was successfull !!" />
       <Label layoutX="2.0" layoutY="44.0" prefHeight="18.0" prefWidth="113.0" text="Your account No. is :" />
-      <Label layoutX="116.0" layoutY="44.0" prefHeight="18.0" prefWidth="214.0" textFill="#0d47f4" />
+      <Label fx:id="acc_no_label" layoutX="116.0" layoutY="44.0" prefHeight="18.0" prefWidth="214.0" textFill="#0d47f4" />
       <Label alignment="CENTER" layoutX="-2.0" layoutY="91.0" prefHeight="18.0" prefWidth="331.0" text="Please create a pin for your account" />
       <Label layoutX="11.0" layoutY="222.0" text="Confirm Pin" />
       <Label alignment="CENTER_RIGHT" layoutX="11.0" layoutY="188.0" prefHeight="18.0" prefWidth="62.0" text="Pin" />
       <TextField fx:id="confirm_regpin_textfield" layoutX="82.0" layoutY="218.0" promptText="Confirm your Pin" />
       <TextField fx:id="regpin_textfield" layoutX="82.0" layoutY="184.0" promptText="Enter your Pin" />
-      <Label alignment="CENTER" layoutX="1.0" layoutY="109.0" prefHeight="18.0" prefWidth="331.0" text="Pin must be 4-8 digits" textFill="#ec1111" />
+      <Label fx:id="warning_label" alignment="CENTER" layoutX="1.0" layoutY="109.0" prefHeight="18.0" prefWidth="331.0" text="Pin must be 4-8 digits" textFill="#ec1111" />
       <Button layoutX="123.0" layoutY="320.0" mnemonicParsing="false" onAction="#pinCreate" text="Confirm" />
    </children>
 </AnchorPane>

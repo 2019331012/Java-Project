@@ -21,7 +21,7 @@ public class Profile_Page_Controller {
         try {
                 root = FXMLLoader.load(getClass().getResource("Change_Pin_Page.fxml"));
             } catch (IOException ex) {
-                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -34,7 +34,7 @@ public class Profile_Page_Controller {
         try {
                 root = FXMLLoader.load(getClass().getResource("Deposit_Page.fxml"));
             } catch (IOException ex) {
-                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -47,7 +47,7 @@ public class Profile_Page_Controller {
         try {
                 root = FXMLLoader.load(getClass().getResource("FastCash_Page.fxml"));
             } catch (IOException ex) {
-                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -60,7 +60,7 @@ public class Profile_Page_Controller {
         try {
                 root = FXMLLoader.load(getClass().getResource("Login_Page.fxml"));
             } catch (IOException ex) {
-                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -73,7 +73,7 @@ public class Profile_Page_Controller {
         try {
                 root = FXMLLoader.load(getClass().getResource("Account_Balance_Page.fxml"));
             } catch (IOException ex) {
-                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -86,7 +86,7 @@ public class Profile_Page_Controller {
         try {
                 root = FXMLLoader.load(getClass().getResource("Withdraw_Page.fxml"));
             } catch (IOException ex) {
-                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
