@@ -14,7 +14,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -31,10 +33,11 @@ public class Register_Page2_Controller {
     private Label warning_label;
     
     @FXML
-    private TextField confirm_regpin_textfield;
-
+    private PasswordField con_passwordfield;
+     
     @FXML
-    private TextField regpin_textfield;
+    private PasswordField yes_passwordfield;
+     
     
     String acc;
     Connection con;
@@ -54,8 +57,8 @@ public class Register_Page2_Controller {
         
         try{
             
-            pin = Integer.parseInt(regpin_textfield.getText());
-            conPin = Integer.parseInt(confirm_regpin_textfield.getText());
+            pin = Integer.parseInt(yes_passwordfield.getText());
+            conPin = Integer.parseInt(con_passwordfield.getText());
         
         } catch(NumberFormatException e){
             i = true;
@@ -67,14 +70,20 @@ public class Register_Page2_Controller {
         if(i){
             i = false;
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Pin must only be numbers");
+            alert.setTitle("Error");
+            alert.setHeaderText("Pin must only be numbers");
+            //alert.setContentText("Account No. or Pin incorrect");
+            alert.show();
         }
-        else if(regpin_textfield.getText().length()<4 || regpin_textfield.getText().length()>8 
-                || confirm_regpin_textfield.getText().length()<4 || confirm_regpin_textfield.getText().length()>8){
+        else if(yes_passwordfield.getText().length()<4 || yes_passwordfield.getText().length()>8 
+                || con_passwordfield.getText().length()<4 || con_passwordfield.getText().length()>8){
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Pin must be 4-8 digits");
+            alert.setTitle("Error");
+            alert.setHeaderText("Pin must be 4-8 digits");
+            //alert.setContentText("Account No. or Pin incorrect");
+            alert.show();
         }
-        else if(regpin_textfield.getText().equals(confirm_regpin_textfield.getText())){
+        else if(yes_passwordfield.getText().equals(con_passwordfield.getText())){
         
         try {
             
@@ -88,12 +97,17 @@ public class Register_Page2_Controller {
         pst = con.prepareStatement(sql1);
         
         pst.setString(1, acc);
-        pst.setString(2, confirm_regpin_textfield.getText()); 
+        pst.setString(2, con_passwordfield.getText()); 
         
         pst.executeUpdate();
         
+        con.close();
+        
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Your Pin has been set");
+        alert.setTitle("Success");
+        alert.setHeaderText("Your Pin has been set");
+        alert.setContentText("Thank You For Joining With Us");
+        alert.show();
         
         try {
                 root = FXMLLoader.load(getClass().getResource("Login_Page.fxml"));
@@ -106,15 +120,18 @@ public class Register_Page2_Controller {
             stage.show();
         
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Register_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Register_Page2_Controller.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         }
         
         else{
             
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("The Pins Do Not Match");
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("The Pins Do Not Match");
+            //alert.setContentText("Account No. or Pin incorrect");
+            alert.show();
         }
 
     }

@@ -54,9 +54,12 @@ public class Login_Page_Controller {
         
         if(username.equals("") || password.equals("")){
             
-            //Alert alert = new Alert(AlertType.ERROR);
-            //alert.setTitle("Please fill out your Acc. No. and Pin approprietly");
-            JOptionPane.showMessageDialog(null, "Please fill out your Acc. No. and Pin approprietly");
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Acc. No. or Pin Blank");
+            alert.setContentText("Please fill out your Acc. No. and Pin approprietly");
+            alert.show();
+            //JOptionPane.showMessageDialog(null, "Please fill out your Acc. No. and Pin approprietly");
         }
 //        else if(username.equals("1234567890") && password.equals("1234567890")) {
 //            try {
@@ -79,7 +82,7 @@ public class Login_Page_Controller {
                         
                 String sql2 = "select * from login"; // where username=? and password=?
                 
-                st = con.createStatement();
+                st = con.createStatement();     ///*ResultSet.TYPE_FORWARD_ONLY,ResultSet.CONCUR_READ_ONLY*/
                 //pst = con.prepareStatement(sql2);
                 
                 rs = st.executeQuery(sql2);
@@ -88,6 +91,7 @@ public class Login_Page_Controller {
                     
                     String un = rs.getString("Account No.");
                     String pw = rs.getString("Pin");
+                    System.out.println("username and password : "+un+" || "+pw);
                     if(username.equals(un)){
                         
                         i=false;
@@ -109,18 +113,24 @@ public class Login_Page_Controller {
                         
                         else{
                         
-                        //Alert alert = new Alert(AlertType.ERROR);
-                        //alert.setTitle("Account No. or Pin incorrect");
-                        JOptionPane.showMessageDialog(null, "Account No. or Pin incorrect");
+                        Alert alert = new Alert(AlertType.ERROR);
+                        alert.setTitle("Incorrect input");
+                        alert.setHeaderText("Account No. or Pin incorrect");
+                        //alert.setContentText("Account No. or Pin incorrect");
+                        alert.show();
+                        //JOptionPane.showMessageDialog(null, "Account No. or Pin incorrect");
                         //break;
                         }
+                        break;
                     } 
-                    break;
                 }
                 if(i /*!rs.next() */){          //!rs.next() should not be used cause if its the last case(rs.last()) in
-                    //Alert alert = new Alert(AlertType.ERROR);    // the while loop then it will be incorrect in if
-                    //alert.setTitle("Account No. or Pin incorrect");     // statement.
-                    JOptionPane.showMessageDialog(null, "Account No. or Pin incorrect");
+                    Alert alert = new Alert(AlertType.ERROR);        // the while loop then it will be incorrect in if
+                    alert.setTitle("Incorrect input");           // statement.
+                    alert.setHeaderText("Account No. or Pin incorrect");
+                    //alert.setContentText("Account No. or Pin incorrect");
+                    alert.show();
+                    //JOptionPane.showMessageDialog(null, "Account No. or Pin incorrect");
                 }
                 con.close();
                 
@@ -134,12 +144,12 @@ public class Login_Page_Controller {
     void register(MouseEvent event) {
         
         try {
-                root = FXMLLoader.load(getClass().getResource("test2.fxml"));
+                root = FXMLLoader.load(getClass().getResource("Register_Page.fxml"));
             } catch (IOException ex) {
                 Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root,544,600);
         stage.setScene(scene);
         stage.show();
     }
