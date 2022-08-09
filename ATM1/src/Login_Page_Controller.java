@@ -40,6 +40,7 @@ public class Login_Page_Controller {
     @FXML
     private TextField username_textfield;
     
+    Info info = new Info();
     Connection con;
     //PreparedStatement pst;
     Statement st;
@@ -91,7 +92,7 @@ public class Login_Page_Controller {
                     
                     String un = rs.getString("Account No.");
                     String pw = rs.getString("Pin");
-                    System.out.println("username and password : "+un+" || "+pw);
+//                    System.out.println("username and password : "+un+" || "+pw);
                     if(username.equals(un)){
                         
                         i=false;
@@ -99,15 +100,32 @@ public class Login_Page_Controller {
             
                         //JOptionPane.showMessageDialog(null, "Please fill out your Acc. No. and Pin approprietly");
                         
+                        String bal = rs.getString("Deposit");
+                        
+//                        try {
+//                                root = FXMLLoader.load(getClass().getResource("Profile_Page.fxml"));
+//                            } catch (IOException ex) {
+//                                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+//                        }
+//                        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//                        scene = new Scene(root);
+//                        stage.setScene(scene);
+//                        stage.show();
                         try {
-                                root = FXMLLoader.load(getClass().getResource("Profile_Page.fxml"));
-                            } catch (IOException ex) {
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile_Page.fxml"));
+                                root = loader.load();
+                                Profile_Page_Controller pf = loader.getController();
+                                info.setInfo(bal,un,pw);
+                                pf.setInfo(info);
+                                //root = FXMLLoader.load(getClass().getResource("Profile_Page.fxml"));
+                            } catch (IOException | ClassCastException ex) {
                                 Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
-                        }
+                            }
                         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         scene = new Scene(root);
                         stage.setScene(scene);
                         stage.show();
+                        
                         //break;
                         }
                         

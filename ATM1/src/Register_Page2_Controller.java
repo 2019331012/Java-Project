@@ -55,10 +55,24 @@ public class Register_Page2_Controller {
     @FXML
     void pinCreate(ActionEvent event) {
         
+        String a,b;
+        a = yes_passwordfield.getText();
+        b = con_passwordfield.getText();
+        
+        if(a.equals("") || b.equals("")){
+            
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Pin is Blank");
+            alert.setContentText("Please fill out your Pin approprietly");
+            alert.show();
+            return;
+        }
+        
         try{
             
-            pin = Integer.parseInt(yes_passwordfield.getText());
-            conPin = Integer.parseInt(con_passwordfield.getText());
+            pin = Integer.parseInt(a);
+            conPin = Integer.parseInt(b);
         
         } catch(NumberFormatException e){
             i = true;
@@ -69,7 +83,7 @@ public class Register_Page2_Controller {
         
         if(i){
             i = false;
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Pin must only be numbers");
             //alert.setContentText("Account No. or Pin incorrect");
@@ -77,7 +91,7 @@ public class Register_Page2_Controller {
         }
         else if(yes_passwordfield.getText().length()<4 || yes_passwordfield.getText().length()>8 
                 || con_passwordfield.getText().length()<4 || con_passwordfield.getText().length()>8){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Pin must be 4-8 digits");
             //alert.setContentText("Account No. or Pin incorrect");
@@ -91,19 +105,20 @@ public class Register_Page2_Controller {
             
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ATM", "root","");
                 
-        String sql1 = "insert into login values (?,?)";
+        String sql1 = "insert into login values (?,?,?)";
         //String sql2 = "select * from register"; // where username=? and password=?
                 
         pst = con.prepareStatement(sql1);
         
         pst.setString(1, acc);
-        pst.setString(2, con_passwordfield.getText()); 
+        pst.setString(2, con_passwordfield.getText());
+        pst.setString(3, "500");
         
         pst.executeUpdate();
         
         con.close();
         
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText("Your Pin has been set");
         alert.setContentText("Thank You For Joining With Us");

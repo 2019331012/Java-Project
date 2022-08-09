@@ -14,12 +14,24 @@ public class Profile_Page_Controller {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    
+    String bal;
+    Info info;
+    
+    void setInfo(Info info){
+        
+        this.info = info;
+//        info.setInfo(bal);
+    }
 
 
     @FXML
     void changePin(MouseEvent event) {
         try {
-                root = FXMLLoader.load(getClass().getResource("Change_Pin_Page.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Change_Pin_Page.fxml"));
+                root = loader.load();
+                Change_Pin_Page_Controller obj = loader.getController();
+                obj.setInfo(info);
             } catch (IOException ex) {
                 Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -32,7 +44,10 @@ public class Profile_Page_Controller {
     @FXML
     void deposit(MouseEvent event) {
         try {
-                root = FXMLLoader.load(getClass().getResource("Deposit_Page.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Deposit_Page.fxml"));
+                root = loader.load();
+                Deposit_Page_Controller obj = loader.getController();
+                obj.setInfo(info);
             } catch (IOException ex) {
                 Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -45,7 +60,10 @@ public class Profile_Page_Controller {
     @FXML
     void fastcash(MouseEvent event) {
         try {
-                root = FXMLLoader.load(getClass().getResource("FastCash_Page.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FastCash_Page.fxml"));
+                root = loader.load();
+                FastCash_Page_Controller obj = loader.getController();
+                obj.setInfo(info);
             } catch (IOException ex) {
                 Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -71,7 +89,10 @@ public class Profile_Page_Controller {
     @FXML
     void showBalance(MouseEvent event) {
         try {
-                root = FXMLLoader.load(getClass().getResource("Account_Balance_Page.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Account_Balance_Page.fxml"));
+                root = loader.load();
+                Account_Balance_Page_Controller acc = loader.getController();
+                acc.setInfo(info);
             } catch (IOException ex) {
                 Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -83,8 +104,20 @@ public class Profile_Page_Controller {
 
     @FXML
     void withdraw(MouseEvent event) {
+//        try {
+//                root = FXMLLoader.load(getClass().getResource("Withdraw_Page.fxml"));
+//            } catch (IOException ex) {
+//                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//        scene = new Scene(root);
+//        stage.setScene(scene);
+//        stage.show();
         try {
-                root = FXMLLoader.load(getClass().getResource("Withdraw_Page.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Withdraw_Page.fxml"));
+                root = loader.load();
+                Withdraw_Page_Controller obj = loader.getController();
+                obj.setInfo(info);
             } catch (IOException ex) {
                 Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
             }

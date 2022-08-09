@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -85,10 +86,10 @@ public class Register_Page_Controller {
                 || nominee_nid_textfield.getText().isEmpty() || nominee_phone_textfield.getText().isEmpty() || nominee_email_textfield.getText().isEmpty() 
                 || nominee_relations_textfield.getText().isEmpty() || nominee_sharepercentage_textfield.getText().isEmpty()){
             
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("One or More TextFields Blank");
-            alert.setContentText("Please fill out All the TextFields approprietly");
+            alert.setHeaderText("One or More Fields Blank");
+            alert.setContentText("Please fill out All the Fields approprietly");
             alert.show();
         }
         
@@ -100,7 +101,7 @@ public class Register_Page_Controller {
             
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ATM", "root","");
                 
-        String sql1 = "insert into register values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql1 = "insert into register values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         String sql2 = "select * from register"; // where username=? and password=?
         
         st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
@@ -131,6 +132,7 @@ public class Register_Page_Controller {
         pst.setString(11, nominee_relations_textfield.getText());
         pst.setString(12, nominee_sharepercentage_textfield.getText());
         pst.setString(13, Ac);
+        pst.setString(14, "500");
         
         pst.executeUpdate();
         

@@ -14,12 +14,16 @@ class AC_Gen {
     String gen(String un){
         
         if(un.isEmpty()){
-            return "1";
+            return "HY631.00000001";
         }
-        
-        k = Integer.parseInt(un);
+        String s = un.substring(6);
+        k = Integer.parseInt(s);
         k++;
-        un = String.valueOf(k);
+        s = String.valueOf(k);
+        for(int i=s.length(); i<8; i++){
+            s = "0"+s;
+        }
+        un = "HY631."+s;
         return un;
     }
     
