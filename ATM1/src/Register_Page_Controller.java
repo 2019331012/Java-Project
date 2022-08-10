@@ -25,6 +25,13 @@ public class Register_Page_Controller {
     private Scene scene;
     private Parent root;
 
+   
+    @FXML
+    private TextField accounttype_textfield;
+    
+    @FXML
+    private TextField profession_textfield;
+    
     @FXML
     private TextField email_textfield;
 
@@ -101,7 +108,7 @@ public class Register_Page_Controller {
             
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ATM", "root","");
                 
-        String sql1 = "insert into register values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql1 = "insert into register values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         String sql2 = "select * from register"; // where username=? and password=?
         
         st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
@@ -124,15 +131,17 @@ public class Register_Page_Controller {
         pst.setString(3, phone_textfield.getText());
         pst.setString(4, email_textfield.getText());
         pst.setString(5, date);
-        pst.setString(6, sourceofincome_textfield.getText());
-        pst.setString(7, nominee_name_textfield.getText());
-        pst.setString(8, nominee_nid_textfield.getText());
-        pst.setString(9, nominee_phone_textfield.getText());
-        pst.setString(10, nominee_email_textfield.getText());
-        pst.setString(11, nominee_relations_textfield.getText());
-        pst.setString(12, nominee_sharepercentage_textfield.getText());
-        pst.setString(13, Ac);
-        pst.setString(14, "500");
+        pst.setString(6, profession_textfield.getText());
+        pst.setString(7, sourceofincome_textfield.getText());
+        pst.setString(8, accounttype_textfield.getText());
+        pst.setString(9, nominee_name_textfield.getText());
+        pst.setString(10, nominee_nid_textfield.getText());
+        pst.setString(11, nominee_phone_textfield.getText());
+        pst.setString(12, nominee_email_textfield.getText());
+        pst.setString(13, nominee_relations_textfield.getText());
+        pst.setString(14, nominee_sharepercentage_textfield.getText());
+        pst.setString(15, Ac);
+        pst.setString(16, "500");
         
         pst.executeUpdate();
         

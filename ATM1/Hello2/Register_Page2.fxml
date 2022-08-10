@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="436.0" prefWidth="321.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Register_Page2_Controller">
+    <stylesheets>
+        <URL value="@register_page2.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="18.0" prefWidth="331.0" text="Your account registration was successfull !!" />
+      <Label layoutX="2.0" layoutY="44.0" prefHeight="18.0" prefWidth="113.0" text="Your account No. is :" />
+      <Label fx:id="acc_no_label" layoutX="116.0" layoutY="44.0" prefHeight="18.0" prefWidth="214.0" textFill="#0d47f4" />
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="91.0" prefHeight="18.0" prefWidth="331.0" text="Please create a pin for your account" />
+      <Label layoutX="11.0" layoutY="222.0" text="Confirm Pin" />
+      <Label alignment="CENTER_RIGHT" layoutX="11.0" layoutY="188.0" prefHeight="18.0" prefWidth="62.0" text="Pin" />
+      <Label fx:id="warning_label" alignment="CENTER" layoutX="1.0" layoutY="109.0" prefHeight="18.0" prefWidth="331.0" text="Pin must be 4-8 digits" textFill="#ec1111" />
+      <Button layoutX="123.0" layoutY="320.0" mnemonicParsing="false" onAction="#pinCreate" text="Confirm" />
+      <PasswordField fx:id="yes_passwordfield" layoutX="82.0" layoutY="184.0" promptText="Enter your Pin" />
+      <PasswordField fx:id="con_passwordfield" layoutX="82.0" layoutY="218.0" promptText="Confirm your Pin" />
+   </children>
+</AnchorPane>

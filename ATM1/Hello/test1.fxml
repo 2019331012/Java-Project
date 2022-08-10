@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1070.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="All_Controller">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="770.0" prefWidth="478.0">
+         <children>
+            <Button layoutX="89.0" layoutY="39.0" mnemonicParsing="false" text="Button" />
+            <CheckBox layoutX="341.0" layoutY="114.0" mnemonicParsing="false" text="CheckBox" />
+            <ComboBox layoutX="141.0" layoutY="252.0" prefWidth="150.0" />
+            <Button layoutX="121.0" layoutY="156.0" mnemonicParsing="false" text="Button" />
+            <TextArea layoutX="368.0" layoutY="165.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextField layoutX="73.0" layoutY="89.0" />
+            <TextField layoutX="67.0" layoutY="132.0" />
+            <PasswordField fx:id="test_passwordfield" layoutX="115.0" layoutY="416.0" prefHeight="58.0" prefWidth="170.0" promptText="you can't see me" />
+            <TextField fx:id="test_textfield" layoutX="116.0" layoutY="365.0" prefHeight="46.0" prefWidth="166.0" promptText="hi friends" />
+            <TextField layoutX="142.0" layoutY="535.0" />
+            <PasswordField layoutX="141.0" layoutY="509.0" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

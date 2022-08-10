@@ -5,15 +5,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account_Balance_Page_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="562.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account_Balance_Page_Controller">
    <children>
-      <Label layoutX="35.0" layoutY="61.0" prefHeight="18.0" prefWidth="106.0" text="Current Balance :" />
-      <Label fx:id="balance_label" layoutX="141.0" layoutY="61.0" prefHeight="18.0" prefWidth="291.0" text="BDT 000 TK" />
-      <Button layoutX="22.0" layoutY="291.0" mnemonicParsing="false" onMouseClicked="#backtoProfile" text="&lt;&lt;Back" />
-      <Button layoutX="32.0" layoutY="166.0" mnemonicParsing="false" onAction="#gotoWithdraw" text="Withdraw" />
-      <Label layoutX="32.0" layoutY="121.0" text="Would you like to Withdraw ?" textFill="#c816dc">
+      <Label layoutX="35.0" layoutY="61.0" prefHeight="20.0" prefWidth="117.0" text="Current Balance :" textFill="YELLOW">
          <font>
-            <Font name="Times New Roman Bold Italic" size="15.0" />
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="balance_label" layoutX="169.0" layoutY="61.0" prefHeight="18.0" prefWidth="291.0" text="BDT 000 TK" textFill="YELLOW">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Button layoutX="35.0" layoutY="292.0" mnemonicParsing="false" onMouseClicked="#backtoProfile" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: yellow;" text="&lt;&lt;Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="360.0" layoutY="188.0" mnemonicParsing="false" onAction="#gotoWithdraw" style="-fx-background-color: yellow;" text="Withdraw">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="101.0" layoutY="145.0" text="Would you like to Withdraw ?" textFill="YELLOW">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
    </children>

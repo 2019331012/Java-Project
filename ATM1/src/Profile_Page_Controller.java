@@ -57,21 +57,21 @@ public class Profile_Page_Controller {
         stage.show();
     }
 
-    @FXML
-    void fastcash(MouseEvent event) {
-        try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("FastCash_Page.fxml"));
-                root = loader.load();
-                FastCash_Page_Controller obj = loader.getController();
-                obj.setInfo(info);
-            } catch (IOException ex) {
-                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+//    @FXML
+//    void fastcash(MouseEvent event) {
+//        try {
+//                FXMLLoader loader = new FXMLLoader(getClass().getResource("FastCash_Page.fxml"));
+//                root = loader.load();
+//                FastCash_Page_Controller obj = loader.getController();
+//                obj.setInfo(info);
+//            } catch (IOException ex) {
+//                Logger.getLogger(Profile_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//        scene = new Scene(root);
+//        stage.setScene(scene);
+//        stage.show();
+//    }
 
     @FXML
     void logout(MouseEvent event) {
