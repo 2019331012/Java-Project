@@ -171,5 +171,20 @@ public class Login_Page_Controller {
         stage.setScene(scene);
         stage.show();
     }
+    
+    
+    @FXML
+    void forgetpass(MouseEvent event) {
+        
+        try {
+                root = FXMLLoader.load(getClass().getResource("forget_pass.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(Login_Page_Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

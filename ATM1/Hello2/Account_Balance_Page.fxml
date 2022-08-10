@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account_Balance_Page_Controller">
+   <children>
+      <Label layoutX="35.0" layoutY="61.0" prefHeight="18.0" prefWidth="106.0" text="Current Balance :" />
+      <Label fx:id="balance_label" layoutX="141.0" layoutY="61.0" prefHeight="18.0" prefWidth="291.0" text="BDT 000 TK" />
+      <Button layoutX="22.0" layoutY="291.0" mnemonicParsing="false" onMouseClicked="#backtoProfile" text="&lt;&lt;Back" />
+      <Button layoutX="32.0" layoutY="166.0" mnemonicParsing="false" onAction="#gotoWithdraw" text="Withdraw" />
+      <Label layoutX="32.0" layoutY="121.0" text="Would you like to Withdraw ?" textFill="#c816dc">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

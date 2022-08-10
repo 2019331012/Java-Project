@@ -5,21 +5,43 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="436.0" prefWidth="321.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Register_Page2_Controller">
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="456.0" style="-fx-background-color: black;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Register_Page2_Controller">
     <stylesheets>
         <URL value="@register_page2.css" />
     </stylesheets>
    <children>
-      <Label alignment="CENTER" layoutY="14.0" prefHeight="18.0" prefWidth="331.0" text="Your account registration was successfull !!" />
-      <Label layoutX="2.0" layoutY="44.0" prefHeight="18.0" prefWidth="113.0" text="Your account No. is :" />
-      <Label fx:id="acc_no_label" layoutX="116.0" layoutY="44.0" prefHeight="18.0" prefWidth="214.0" textFill="#0d47f4" />
-      <Label alignment="CENTER" layoutX="-2.0" layoutY="91.0" prefHeight="18.0" prefWidth="331.0" text="Please create a pin for your account" />
-      <Label layoutX="11.0" layoutY="222.0" text="Confirm Pin" />
-      <Label alignment="CENTER_RIGHT" layoutX="11.0" layoutY="188.0" prefHeight="18.0" prefWidth="62.0" text="Pin" />
-      <Label fx:id="warning_label" alignment="CENTER" layoutX="1.0" layoutY="109.0" prefHeight="18.0" prefWidth="331.0" text="Pin must be 4-8 digits" textFill="#ec1111" />
-      <Button layoutX="123.0" layoutY="320.0" mnemonicParsing="false" onAction="#pinCreate" text="Confirm" />
-      <PasswordField fx:id="yes_passwordfield" layoutX="82.0" layoutY="184.0" promptText="Enter your Pin" />
-      <PasswordField fx:id="con_passwordfield" layoutX="82.0" layoutY="218.0" promptText="Confirm your Pin" />
+      <Label alignment="CENTER" layoutX="56.0" layoutY="34.0" prefHeight="26.0" prefWidth="346.0" text="Your account registration was successfull !!" textFill="YELLOW">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="108.0" prefHeight="18.0" prefWidth="126.0" text="Your account No. is :" textFill="YELLOW">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="acc_no_label" layoutX="172.0" layoutY="108.0" prefHeight="18.0" prefWidth="214.0" textFill="#0d47f4">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="61.0" layoutY="200.0" prefHeight="18.0" prefWidth="331.0" text="Please create a pin for your account" textFill="YELLOW">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="116.0" layoutY="358.0" text="Confirm Pin" textFill="YELLOW">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="304.0" prefHeight="18.0" prefWidth="62.0" text="Pin" textFill="YELLOW">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="warning_label" alignment="CENTER" layoutX="61.0" layoutY="231.0" prefHeight="18.0" prefWidth="331.0" textFill="#ec1111">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Button layoutX="363.0" layoutY="426.0" mnemonicParsing="false" onAction="#pinCreate" style="-fx-background-color: yellow;" text="Confirm" />
+      <PasswordField fx:id="yes_passwordfield" layoutX="207.0" layoutY="300.0" promptText="Enter your Pin" />
+      <PasswordField fx:id="con_passwordfield" layoutX="207.0" layoutY="354.0" promptText="Confirm your Pin" />
    </children>
 </AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profile_Page_Controller">
+   <children>
+      <Label layoutX="225.0" layoutY="14.0" text="Welcome">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Button layoutX="459.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#deposit" text="Deposit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="80.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#withdraw" text="Withdraw">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="455.0" layoutY="204.0" mnemonicParsing="false" onMouseClicked="#fastcash" text="FastCash">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="88.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#changePin" text="Change Pin">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="80.0" layoutY="204.0" mnemonicParsing="false" onMouseClicked="#showBalance" text="Account Balance">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="80.0" layoutY="421.0" mnemonicParsing="false" text="Help &amp; Support" />
+      <Button layoutX="477.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#logout" text="Logout" />
+      <Button layoutX="542.0" layoutY="433.0" mnemonicParsing="false" text="About Us" />
+   </children>
+</AnchorPane>

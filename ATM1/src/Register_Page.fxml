@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -120,14 +119,12 @@
                         <Font name="Arial Rounded MT Bold" size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox layoutX="310.0" layoutY="355.0" prefHeight="25.0" prefWidth="214.0" />
                   <TextField fx:id="nominee_name_textfield" layoutX="311.0" layoutY="601.0" prefHeight="25.0" prefWidth="214.0" />
                   <TextField fx:id="nominee_nid_textfield" layoutX="311.0" layoutY="637.0" prefHeight="25.0" prefWidth="214.0" />
                   <TextField fx:id="nominee_phone_textfield" layoutX="311.0" layoutY="670.0" prefHeight="25.0" prefWidth="214.0" />
                   <TextField fx:id="nominee_email_textfield" layoutX="311.0" layoutY="704.0" prefHeight="25.0" prefWidth="214.0" />
                   <TextField fx:id="nominee_relations_textfield" layoutX="311.0" layoutY="737.0" prefHeight="25.0" prefWidth="214.0" />
                   <TextField fx:id="sourceofincome_textfield" layoutX="310.0" layoutY="394.0" prefHeight="25.0" prefWidth="214.0" />
-                  <ChoiceBox layoutX="310.0" layoutY="433.0" prefHeight="25.0" prefWidth="214.0" />
                   <Button fx:id="register_button" layoutX="444.0" layoutY="842.0" mnemonicParsing="false" onMouseClicked="#register" text="Confirm">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
@@ -167,6 +164,8 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </CheckBox>
+                  <TextField fx:id="profession_textfield" layoutX="310.0" layoutY="355.0" prefHeight="25.0" prefWidth="214.0" />
+                  <TextField fx:id="accounttype_textfield" layoutX="310.0" layoutY="433.0" prefHeight="25.0" prefWidth="214.0" />
                </children>
             </AnchorPane>
          </children></AnchorPane>
